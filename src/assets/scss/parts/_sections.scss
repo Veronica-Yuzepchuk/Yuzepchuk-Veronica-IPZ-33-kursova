@@ -1,0 +1,176 @@
+@use "../default/base" as vars;
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    &.lock-scroll {
+        overflow: hidden;
+        position: fixed;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+    }
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+
+.first {
+    padding: 70px 0 50px;
+    position: relative;
+  
+    &.bg.scroll-snap-section.flex-all-center {
+        .swiper-first {
+            .box {
+              display: flex;
+              justify-content: space-evenly;
+              position: relative;
+              z-index: 1;
+              bottom: 20%;
+              align-items: center;
+          
+              .first__arrow-down {
+                font-weight: 700;
+                text-transform: uppercase;
+                position: relative;
+                z-index: 2;
+                display: inline-flex;
+                flex-direction: column;
+                align-items: center;
+                color: vars.$white;
+                transition: color 0.3s;
+          
+                &::after {
+                  content: "";
+                  border: 10px solid transparent;
+                  border-top: 10px solid currentColor;
+                  border-bottom: none;
+                  margin-top: 5px;
+                  transition: border-top-color 0.3s;
+                }
+          
+                &:hover {
+                  color: vars.$orange;
+          
+                  &::after {
+                    border-top-color: vars.$orange;
+                  }
+                }
+              }
+            }
+          }
+          
+  
+      .first__container.container {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        text-align: center;
+
+        .first__subtitle.subtitle {
+          margin-bottom: 30px;
+        }
+  
+        .first__link.link {
+          align-self: center;
+          font-family: vars.$secondary-font;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: 700;
+          color: #1a1917;
+          background-color: vars.$orange;
+          transition: background-color 0.3s, color 0.3s;
+          border-radius: 4px;
+          padding: 15px 20px;
+          display: block;
+          max-width: fit-content;
+  
+          &:hover {
+            background-color: vars.$white;
+          }
+        }
+      }
+
+      a,
+      a:hover,
+      a:visited {
+        text-decoration: none;
+      }
+    }
+  }
+
+.second {
+    background-image: url(../images/bg-second.jpg);
+    padding: 20px 0;
+    position: relative;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        margin: auto;
+    }
+
+    &__title {
+        font-family: vars.$primary-font;
+        font-weight: 400;
+        border-bottom: 3px solid vars.$white;
+        margin-right: 60px;
+    }
+
+    &__text {
+        margin-top: 1.5rem;
+        max-width: 100%;
+    }
+}
+
+.third {
+    background-image: url(../images/bg-third.jpg);
+    padding: 50px 0;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    &__content {
+        margin-left: 30px;
+    }
+}
+
+.four {
+    background-image: url(../images/bg-four.jpg);
+    padding: 50px 0;
+
+    &__container {
+        width: 100%;
+    }
+
+    &__content {
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        margin-bottom: 45px;
+    }
+
+    .first__container,
+    &__content {
+        text-align: center;
+    }
+}
+
+.scroll-snap-section {
+    scroll-snap-align: start;
+}

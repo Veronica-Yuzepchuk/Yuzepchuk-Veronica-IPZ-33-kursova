@@ -1,0 +1,73 @@
+@use "../default/base" as vars;
+.third {
+  .accordion-box {
+    position: relative;
+
+    &.accordion-box_active {
+      .accordion-content::before {
+        content: "";
+        border: 1px solid vars.$white;
+        background-color: vars.$white;
+      }
+    }
+
+    .accordion-content {
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      padding: 0 20px;
+      overflow: hidden;
+      max-height: 0;
+
+      &::before {
+        content: "";
+        width: 2px;
+        height: 90%;
+        position: absolute;
+        border-radius: 10px;
+        left: -18px;
+        top: 17px;
+        overflow: hidden;
+      }
+    }
+
+    .third__accordion-btn {
+      font-family: vars.$primary-font;
+      font-weight: 400;
+      letter-spacing: 2px;
+      position: relative;
+      display: flex;
+      width: 100%;
+      font-size: 36px;
+      line-height: 130%;
+      background: none;
+      border: none;
+      color: vars.$orange;
+      margin: 0.7rem 0 0.3rem;
+      gap: 35px;
+
+      &::before {
+        content: "";
+        border: 0.2rem solid vars.$white;
+        border-radius: 50%;
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        left: -24px;
+        top: 11px;
+        overflow: hidden;
+      }
+
+      &.accordion-btn_active {
+        &::before {
+          background-color: vars.$white;
+        }
+
+        + .accordion-content {
+          max-height: 500px;        }
+      }
+    }
+  }
+
+  .third__accordion {
+    max-width: 600px;
+  }
+}

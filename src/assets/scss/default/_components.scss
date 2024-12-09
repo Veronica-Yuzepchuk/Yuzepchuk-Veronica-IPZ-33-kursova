@@ -1,0 +1,121 @@
+@use "../default/base" as vars;
+.subtitle, 
+.title {
+    font-family: vars.$primary-font;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: vars.$white;
+}
+
+.subtitle, 
+.text, 
+.title {
+    color: vars.$white;
+    text-decoration: none;
+}
+
+.title {
+    margin: 0;
+    font-size: 80px;
+    line-height: normal;
+    letter-spacing: 0.04rem;
+}
+
+.subtitle {
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: 0.15rem;
+}
+
+.menu-link, 
+.title {
+    text-transform: uppercase;
+}
+
+.text {
+    font-family: vars.$secondary-font;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.04rem;
+    line-height: 120%;
+}
+
+.menu-item {
+    transition: margin 0.3s;
+    margin-right: 40px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.menu-link {
+    font-family: vars.$secondary-font;
+    font-weight: 700;
+    font-size: inherit;
+    color: inherit;
+    line-height: 120%;
+}
+
+.ibg {
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.flex-all-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-v-center {
+    display: flex;
+    align-items: center;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.bg {
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+*, :after, :before {
+    box-sizing: inherit;
+}

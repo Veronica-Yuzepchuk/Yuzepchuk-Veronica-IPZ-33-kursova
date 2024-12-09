@@ -1,0 +1,32 @@
+@use "../default/base" as vars;
+.table {
+    max-width: 575px;
+    color: #fff;
+    font-size: 30px;
+    display: grid;
+    background-color: #00000075;
+    border-radius: 5px;
+    grid-template-columns: repeat(6, 1fr);
+
+    &__descr {
+        margin: 0;
+    }
+
+    &__item {
+        padding: 0.7rem 0.7rem 1.4rem;
+        border: 1px solid rgba(151, 151, 151, 0.51);
+
+        &:nth-child(-n+4) {
+            grid-column: 3 span;
+        }
+
+        &:last-child {
+            grid-column: 6 span;
+        }
+    }
+
+    &__title {
+        color: vars.$orange;
+        margin-bottom: 10px;
+    }
+}

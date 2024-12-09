@@ -1,0 +1,142 @@
+@use "../default/base" as vars;
+
+.scroll-snap-section {
+  scroll-snap-align: start;
+}
+
+.quotes {
+  background: radial-gradient(78.66% 177.87% at 19.56% 37.57%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 19.22%, vars.$black 99.74%), url(../images/bg-five.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+
+  &__link {
+    text-align: center;
+    cursor: pointer;
+    font-family: vars.$secondary-font;
+    font-size: 16px;
+    font-weight: 700;
+    color: vars.$black;
+    background-color: vars.$orange;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+    padding: 15px 20px;
+    display: block;
+    max-width: fit-content;
+  }
+
+  &__link:hover {
+    background-color: vars.$white;
+    color: vars.$black;
+  }
+
+  &__title {
+    margin-bottom: 45px;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin: auto;
+    column-gap: 30px;
+  }
+
+  &__content {
+    max-width: 400px;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+  }
+}
+
+.press-quotes {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 30px;
+
+  &__item {
+    background: vars.$darkgray;
+    border-radius: 10px;
+    padding: 15px 20px 20px 15px;
+    margin: 0;
+
+    &:first-child {
+      grid-column: 2 / 5 span;
+    }
+
+    &:nth-child(2) {
+      grid-column: 5 span;
+    }
+
+    &:nth-child(3) {
+      grid-column: 2 / 5 span;
+    }
+  }
+
+  &__box {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 0.5fr);
+    column-gap: 15px;
+  }
+
+  &__images {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    box-shadow: 7px 0 0 vars.$orange;
+    grid-row: 2 span;
+  }
+
+  &__name {
+    font-family: vars.$primary-font;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    color: vars.$orange;
+    grid-column: 3 span;
+  }
+
+  &__works {
+    font-family: vars.$secondary-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    color: vars.$white;
+    opacity: 0.5;
+    grid-column: 2 / 3 span;
+    grid-row: 2 / 1 span;
+  }
+
+  &__icon {
+    grid-column: end;
+    justify-self: start;
+    align-self: start;
+    font-size: 1rem;
+    color: vars.$white;
+    opacity: 0.3;
+    transition: color 0.3s ease, opacity 0.3s ease;
+  }
+
+  &__quote {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  &__time {
+    font-family: vars.$secondary-font;
+    font-weight: 400;
+    font-size: 14px;
+    color: vars.$white;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    display: block;
+    line-height: 120%;
+  }
+}

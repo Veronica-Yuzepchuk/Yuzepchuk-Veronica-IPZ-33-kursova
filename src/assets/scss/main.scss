@@ -1,0 +1,18 @@
+@use "default/_font.scss";
+@use "default/_base.scss";
+
+// Компоненти та загальні стилі
+@use "parts/_header.scss";
+@use "parts/_footer.scss";
+@use "parts/_accordion.scss";
+@use "parts/_comm.scss";
+
+// Секції
+@use "parts/_sections.scss";
+@use "parts/_subscribe.scss";
+@use "parts/_table.scss";
+
+// Бібліотеки та утиліти
+@use "parts/_swiper.scss";
+@use "default/_components.scss";
+@use "default/_media.scss";

@@ -1,0 +1,99 @@
+@use "../default/base" as vars;
+
+.subscribe {
+  padding: 50px 0;
+  background-color: vars.$black;
+  position: relative;
+
+  &__title {
+    margin-bottom: 45px;
+  }
+
+  &__container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    grid-template-areas: 
+      "img ."
+      "img content"
+      "img form"
+      "img .";
+  }
+
+  &__img {
+    grid-area: img;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    max-width: 670px;
+    grid-area: content;
+  }
+
+  &__text {
+    margin-bottom: 70px;
+  }
+
+  &__form {
+    grid-area: form;
+  }
+}
+
+.form {
+  display: flex;
+  gap: 15px;
+
+  &__input {
+    border: 0;
+    color: vars.$orange;
+    background: vars.$gray;
+    max-width: 360px;
+
+    &::placeholder {
+      color: vars.$orange;
+    }
+  }
+  
+  &__input-title {
+    font-family: vars.$secondary-font;
+    font-weight: 400;
+    font-size: 14px;
+    color: vars.$white;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    margin-bottom: 10px;
+  }
+
+  &__label-box {
+    background: vars.$gray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  &__link {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    color: vars.$black;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+    padding: 15px 20px;
+    display: block;
+    max-width: fit-content;
+    border: 0;
+    background-color: vars.$orange;
+
+    &:hover,
+    &:active {
+      background-color: vars.$white;
+      color: vars.$black;
+    }
+  }
+}
