@@ -63,7 +63,7 @@
         right: 0;
         height: 3px;
         width: 100%;
-        background-color: var(--white);
+        background-color: vars.$white;
         border-radius: 3px;
         transition: width .3s;
     }
@@ -130,7 +130,7 @@
     }
 
     .header__link {
-        font-family: 'Open Sans', sans-serif;
+        font-family: vars.$secondary-font;
         font-weight: 400;
         font-size: 25px;
         white-space: normal;
@@ -442,7 +442,7 @@
 @media (pointer: fine) and (hover: hover) {
     .slider-section .swiper-button-nextt:hover svg,
     .slider-section .swiper-button-prevv:hover svg {
-        stroke: var(--orange);
+        stroke: vars.$orange;
     }
 
     .menu-link {

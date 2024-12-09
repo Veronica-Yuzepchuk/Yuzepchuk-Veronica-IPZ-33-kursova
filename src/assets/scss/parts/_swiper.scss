@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center; /* Центрування по вертикалі */
+    justify-content: center;
     align-items: center;
 }
 
@@ -92,7 +92,7 @@
       width: 25px;
       height: 70px;
       fill: none;
-      stroke: white;
+      stroke: vars.$white;
       stroke-width: 2;
       transition: stroke 0.3s;
   }
@@ -103,7 +103,7 @@
   
   .splide__arrows .swiper__button-prevv:hover svg,
   .splide__arrows .swiper__button-nextt:hover svg {
-      stroke: #FFB548;
+      stroke: vars.$orange;
   }
   
   .splide__arrows .swiper__button-prevv.swiper__button-disabled,
@@ -156,7 +156,7 @@
         content: "";
         height: 3px;
         width: 100%;
-        background-color: white;
+        background-color: vars.$white;
     }
 
     & .swiper-button-next::after,
@@ -167,7 +167,7 @@
     }
 
     & .swiper-button-next::after {
-        border-left: 10px solid white;
+        border-left: 10px solid vars.$white;
     }
 
     & .swiper-button-prev {
@@ -175,7 +175,7 @@
     }
 
     & .swiper-button-prev::after {
-        border-right: 10px solid white;
+        border-right: 10px solid vars.$white;
     }
 
     & .swiper-button-disabled {

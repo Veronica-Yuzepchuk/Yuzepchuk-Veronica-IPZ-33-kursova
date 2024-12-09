@@ -1,7 +1,7 @@
 @use "../default/base" as vars;
 .table {
     max-width: 575px;
-    color: #fff;
+    color: vars.$white;
     font-size: 30px;
     display: grid;
     background-color: #00000075;
